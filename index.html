@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yovan attire - Effortless Style, Redefined</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for typography and other elements */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .font-serif-display {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Style for the hero section's parallax background */
+        #hero {
+            background-image: url('https://placehold.co/1920x1080/e2e8f0/334155?text=Yovan+attire+Collection');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background-position 0.2s ease-out;
+        }
+        #lookbook-teaser {
+             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x600/64748b/ffffff?text=Style+Inspiration');
+             background-attachment: fixed;
+             background-position: center;
+             background-repeat: no-repeat;
+             background-size: contain;
+        }
+        /* Simple transition for smooth hover effects */
+        .product-card img {
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Custom modal styles */
+        .modal-backdrop {
+            transition: opacity 0.3s ease;
+        }
+        /* Remove default marker from details summary */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary {
+            list-style: none; /* For Firefox */
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            #hero, #lookbook-teaser {
+                /* Disable fixed background on mobile to prevent cropping/zooming issues */
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-serif-display font-bold text-gray-900">Yovan attire</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#hero" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+                <a href="allproducts.html" class="text-gray-600 hover:text-gray-900 transition">Shop</a>
+                <a href="about.html" class="text-gray-600 hover:text-gray-900 transition">About</a>
+                <a href="lookbook.html" class="text-gray-600 hover:text-gray-900 transition">Lookbook</a>
+                <a href="#journal" class="text-gray-600 hover:text-gray-900 transition">Journal</a>
+                <a href="#faq" class="text-gray-600 hover:text-gray-900 transition">FAQ</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-600 hover:text-gray-900 cursor-pointer"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#hero" class="block py-2 text-gray-600 hover:text-gray-900">Home</a>
+            <a href="allproducts.html" class="block py-2 text-gray-600 hover:text-gray-900">Shop</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-gray-900">About</a>
+            <a href="lookbook.html" class="block py-2 text-gray-600 hover:text-gray-900">Lookbook</a>
+            <a href="#journal" class="block py-2 text-gray-600 hover:text-gray-900">Journal</a>
+            <a href="#faq" class="block py-2 text-gray-600 hover:text-gray-900">FAQ</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-gray-900">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Parallax Effect -->
+        <section id="hero" class="h-[70vh] md:h-[85vh] flex items-center justify-center text-center text-white relative">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="relative z-10 px-4">
+                <h1 class="text-5xl md:text-7xl font-serif-display font-bold mb-4 drop-shadow-lg">Effortless Style, Redefined.</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 drop-shadow-md">Discover our new collection of timeless pieces, crafted for the modern individual.</p>
+                <a href="allproducts.html" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="featured-products" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-serif-display font-bold text-center mb-12">Featured Products</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="product-card group bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="relative">
+                            <img src="https://placehold.co/600x700/d1d5db/334155?text=Classic+Tee" alt="Classic White Tee" class="w-full h-auto object-cover group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x700/d1d5db/334155?text=Image+Not+Found';">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <!-- A personalized link can be added here -->
+                                <a href="#" class="bg-white text-gray-900 font-bold py-2 px-6 rounded-full">Send Message</a>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Classic Tee</h3>
+                            <p class="text-gray-600">$49.99</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="product-card group bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="relative">
+                            <img src="https://placehold.co/600x700/94a3b8/ffffff?text=Denim+Jacket" alt="Denim Jacket" class="w-full h-auto object-cover group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x700/94a3b8/ffffff?text=Image+Not+Found';">
+                             <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <!-- A personalized link can be added here -->
+                                <a href="#" class="bg-white text-gray-900 font-bold py-2 px-6 rounded-full">Send Message</a>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Denim Jacket</h3>
+                            <p class="text-gray-600">$129.99</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="product-card group bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="relative">
+                            <img src="https://placehold.co/600x700/64748b/ffffff?text=Leather+Boots" alt="Leather Boots" class="w-full h-auto object-cover group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x700/64748b/ffffff?text=Image+Not+Found';">
+                             <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <!-- A personalized link can be added here -->
+                                <a href="#" class="bg-white text-gray-900 font-bold py-2 px-6 rounded-full">Send Message</a>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Leather Boots</h3>
+                            <p class="text-gray-600">$199.99</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="product-card group bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="relative">
+                            <img src="https://placehold.co/600x700/a3a3a3/ffffff?text=Wool+Scarf" alt="Wool Scarf" class="w-full h-auto object-cover group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x700/a3a3a3/ffffff?text=Image+Not+Found';">
+                             <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <!-- A personalized link can be added here -->
+                                <a href="#" class="bg-white text-gray-900 font-bold py-2 px-6 rounded-full">Send Message</a>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-semibold">Wool Scarf</h3>
+                            <p class="text-gray-600">$79.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lookbook Teaser Section -->
+        <section id="lookbook-teaser" class="py-16 md:py-20 bg-gray-50 text-center">
+            <div class="container mx-auto px-6 text-white">
+                <h2 class="text-4xl font-serif-display font-bold mb-4">The Summer '25 <br class="sm:hidden"> Lookbook</h2>
+                <p class="max-w-2xl mx-auto mb-8">Explore our latest collection through style stories designed to inspire your wardrobe.</p>
+                <a href="lookbook.html" class="bg-white text-gray-900 font-bold py-3 px-12 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 inline-block">View The Lookbook</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/800x600/d1d5db/475569?text=Our+Story" alt="Yovan attire Brand Story" class="rounded-lg shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/800x600/d1d5db/475569?text=Image+Not+Found';">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl font-serif-display font-bold mb-6">About Yovan attire</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Yovan attire was founded on the principle of creating high-quality, versatile pieces that transcend seasons. We believe in mindful consumption and timeless design. Our collections are thoughtfully curated to build a wardrobe that is both functional and beautiful.</p>
+                    <a href="about.html" class="text-gray-900 font-bold hover:underline">Know More &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journal Section -->
+        <section id="journal" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <article class="max-w-4xl mx-auto">
+                    <header class="text-center mb-12">
+                        <h2 class="text-4xl font-serif-display font-bold mb-4">From Our Journal</h2>
+                        <p class="text-gray-500 text-sm font-medium mb-2">STYLE TIPS | JULY 26, 2025</p>
+                        <h1 class="text-4xl md:text-5xl font-serif-display font-bold text-gray-900">5 Ways to Style Our Classic Tee</h1>
+                    </header>
+
+                    <!-- Video Player -->
+                    <div class="mb-12">
+                        <video class="w-full h-auto rounded-lg shadow-xl bg-gray-200" autoplay loop muted playsinline poster="https://placehold.co/1280x720/d1d5db/475569?text=Video+of+Styling+Tips">
+                            <!-- A real video source URL would be placed here -->
+                            <source src="yovan.mp4" type="video/mp4">
+                            Your browser does not support the video tag. This video is approximately 8 seconds long.
+                        </video>
+                    </div>
+
+                    <div class="prose prose-lg max-w-none mx-auto text-gray-600 leading-relaxed">
+                        <p class="text-xl">The perfect t-shirt is the cornerstone of any great wardrobe. It’s a blank canvas for self-expression, offering endless versatility. Our Classic Tee is designed with the perfect fit and the softest organic cotton to be your go-to piece. Here are five ways to take it from simple to statement.</p>
+                        
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">1. Effortless Casual</h3>
+                        <p>Pair the tee with your favorite pair of high-waisted jeans and classic white sneakers. Add a simple gold necklace and a crossbody bag for a timeless, everyday look that’s perfect for running errands or grabbing coffee.</p>
+
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">2. Office Chic</h3>
+                        <p>Tuck the Classic Tee into a pair of tailored trousers or a sleek midi skirt. Layer with a sharp blazer and finish with pointed-toe flats or loafers. It’s a comfortable yet professional look that commands attention.</p>
+
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">3. Weekend Layers</h3>
+                        <p>For a relaxed weekend vibe, wear the tee under an open denim or flannel shirt. Combine with comfortable chinos or shorts and your favorite boots. It’s a practical and stylish look for any casual outing.</p>
+
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">4. Evening Elegance</h3>
+                        <p>Believe it or not, a tee can be evening-appropriate. Style it with a flowing silk skirt or wide-leg satin pants. Add a pair of statement earrings, heeled sandals, and a clutch to elevate the entire outfit instantly.</p>
+
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">5. Monochrome Modern</h3>
+                        <p>Create a sophisticated, modern look by sticking to a single color palette. Pair a white tee with white jeans and a white blazer, or a black tee with black trousers and a black leather jacket. This creates a powerful, streamlined silhouette.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-serif-display font-bold text-center mb-12">Frequently Asked Questions</h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <details class="bg-gray-50 p-6 rounded-lg shadow-sm group">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center group-open:mb-4">
+                            What is your shipping policy?
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300 transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <p class="text-gray-600 leading-relaxed">We offer free standard shipping on all orders over $50. For orders under $50, standard shipping is a flat rate of $5. Expedited shipping options are available at checkout. Orders are typically processed within 1-2 business days.</p>
+                    </details>
+                    <!-- FAQ Item 2 -->
+                    <details class="bg-gray-50 p-6 rounded-lg shadow-sm group">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center group-open:mb-4">
+                            How do I return or exchange an item?
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300 transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <p class="text-gray-600 leading-relaxed">We accept returns and exchanges within 30 days of purchase. Items must be in their original, unworn condition with all tags attached. To initiate a return, please visit our returns portal or contact our support team at yovanattire@gmail.com.</p>
+                    </details>
+                     <!-- FAQ Item 3 -->
+                    <details class="bg-gray-50 p-6 rounded-lg shadow-sm group">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center group-open:mb-4">
+                            What materials do you use?
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300 transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <p class="text-gray-600 leading-relaxed">We are committed to using high-quality, sustainable materials whenever possible. Our products feature materials like organic cotton, linen, recycled polyester, and responsibly sourced wool. You can find specific material information on each product's detail page.</p>
+                    </details>
+                    <!-- FAQ Item 4 -->
+                    <details class="bg-gray-50 p-6 rounded-lg shadow-sm group">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center group-open:mb-4">
+                            How can I track my order?
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300 transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <p class="text-gray-600 leading-relaxed">Once your order has shipped, you will receive a confirmation email with a tracking number. You can use this number on the carrier's website to track the status of your delivery.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-serif-display font-bold text-center mb-12">Get In Touch</h2>
+                <div class="max-w-3xl mx-auto">
+                    <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500"></textarea>
+                        </div>
+                        <div class="md:col-span-2 text-center">
+                            <button type="submit" class="bg-gray-800 text-white font-bold py-3 px-12 rounded-full hover:bg-gray-900 transition-all duration-300 transform hover:scale-105">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-2xl font-serif-display font-bold mb-4">Yovan attire</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Twitter</a>
+            </div>
+            <div class="text-gray-400 mb-6 space-y-1">
+                <p>Email: <a href="mailto:yovanattire@gmail.com" class="hover:text-white">yovanattire@gmail.com</a></p>
+                <p>Phone: <a href="tel:8769091670" class="hover:text-white">8769091670</a></p>
+            </div>
+            <p class="text-gray-500">&copy; 2025 Yovan attire. All Rights Reserved.</p>
+            <p class="text-gray-500"> Created With Love by H&H creations</p>
+
+        </div>
+    </footer>
+    
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal-backdrop fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden opacity-0">
+        <div class="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 class="text-2xl font-bold mb-2">Thank You!</h3>
+            <p class="text-gray-600 mb-6">Your message has been sent successfully. We'll get back to you soon.</p>
+            <button id="close-modal-button" class="bg-gray-800 text-white font-bold py-2 px-8 rounded-full hover:bg-gray-900 transition">Close</button>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hero = document.getElementById('hero');
+            const header = document.getElementById('header');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const contactForm = document.getElementById('contact-form');
+            const successModal = document.getElementById('success-modal');
+            const closeModalButton = document.getElementById('close-modal-button');
+
+            // --- Parallax Effect ---
+            // A simple parallax effect that adjusts the background position on scroll.
+            // It's throttled for performance to avoid running on every single scroll pixel.
+            let isThrottled = false;
+            window.addEventListener('scroll', () => {
+                if (!isThrottled) {
+                    window.requestAnimationFrame(() => {
+                        const scrollPosition = window.pageYOffset;
+                        // Move the background image up at a fraction of the scroll speed
+                        if(hero) {
+                            hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+                        }
+                        isThrottled = false;
+                    });
+                    isThrottled = true;
+                }
+            });
+
+            // --- Sticky Header Shadow ---
+            // Adds a shadow to the header when the user scrolls down.
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-lg');
+                } else {
+                    header.classList.remove('shadow-lg');
+                }
+            });
+
+            // --- Mobile Menu Toggle ---
+            // Toggles the visibility of the mobile navigation menu.
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Smooth Scrolling for Nav Links on this page ---
+            // Handles smooth scrolling when a navigation link is clicked.
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // check if the link is on the same page
+                    if(window.location.pathname === new URL(this.href).pathname){
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                            // Close mobile menu on navigation
+                            if (!mobileMenu.classList.contains('hidden')) {
+                                mobileMenu.classList.add('hidden');
+                            }
+                        }
+                    }
+                });
+            });
+
+            // --- Contact Form Submission ---
+            // Simulates form submission and shows a success modal.
+            if(contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault(); // Prevent actual form submission
+                    
+                    // Show modal with a fade-in effect
+                    successModal.classList.remove('hidden');
+                    setTimeout(() => {
+                        successModal.classList.remove('opacity-0');
+                    }, 10);
+
+                    this.reset(); // Reset form fields
+                });
+            }
+
+            // --- Close Modal ---
+            // Closes the success modal when the close button or backdrop is clicked.
+            const closeModal = () => {
+                successModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    successModal.classList.add('hidden');
+                }, 300); // Wait for transition to finish
+            };
+            if(closeModalButton){
+                closeModalButton.addEventListener('click', closeModal);
+            }
+            if(successModal){
+                 successModal.addEventListener('click', (e) => {
+                    // Only close if the backdrop itself is clicked, not the content
+                    if (e.target === successModal) {
+                        closeModal();
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

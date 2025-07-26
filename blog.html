@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yovan attire - Journal</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for typography and other elements */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .font-serif-display {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-serif-display font-bold text-gray-900">Yovan attire</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+                <a href="allproducts.html" class="text-gray-600 hover:text-gray-900 transition">Shop</a>
+                <a href="about.html" class="text-gray-600 hover:text-gray-900 transition">About</a>
+                <a href="blog.html" class="text-gray-900 font-semibold transition">Blog</a>
+                <a href="index.html#faq" class="text-gray-600 hover:text-gray-900 transition">FAQ</a>
+                <a href="index.html#contact" class="text-gray-600 hover:text-gray-900 transition">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-600 hover:text-gray-900 cursor-pointer"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-gray-900">Home</a>
+            <a href="allproducts.html" class="block py-2 text-gray-600 hover:text-gray-900">Shop</a>
+            <a href="about.html" class="block py-2 text-gray-600 hover:text-gray-900">About</a>
+            <a href="blog.html" class="block py-2 text-gray-900 font-semibold">Blog</a>
+            <a href="index.html#faq" class="block py-2 text-gray-600 hover:text-gray-900">FAQ</a>
+            <a href="index.html#contact" class="block py-2 text-gray-600 hover:text-gray-900">Contact</a>
+        </div>
+    </header>
+
+    <main class="bg-white">
+        <!-- Blog Post Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <article class="max-w-4xl mx-auto">
+                    <header class="text-center mb-12">
+                        <p class="text-gray-500 text-sm font-medium mb-2">STYLE TIPS | JULY 26, 2025</p>
+                        <h1 class="text-4xl md:text-6xl font-serif-display font-bold text-gray-900">5 Ways to Style Our Classic Tee</h1>
+                    </header>
+
+                    <!-- Video Player -->
+                    <div class="mb-12">
+                        <video class="w-full h-auto rounded-lg shadow-xl bg-gray-200" controls poster="https://placehold.co/1280x720/d1d5db/475569?text=Video+of+Styling+Tips">
+                            <!-- A real video source URL would be placed here -->
+                            <!-- <source src="path/to/your-8-sec-video.mp4" type="video/mp4"> -->
+                            Your browser does not support the video tag. This video is approximately 8 seconds long.
+                        </video>
+                    </div>
+
+                    <div class="prose prose-lg max-w-none mx-auto text-gray-600 leading-relaxed">
+                        <p class="text-xl">The perfect t-shirt is the cornerstone of any great wardrobe. It’s a blank canvas for self-expression, offering endless versatility. Our Classic Tee is designed with the perfect fit and the softest organic cotton to be your go-to piece. Here are five ways to take it from simple to statement.</p>
+                        
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">1. Effortless Casual</h3>
+                        <p>Pair the tee with your favorite pair of high-waisted jeans and classic white sneakers. Add a simple gold necklace and a crossbody bag for a timeless, everyday look that’s perfect for running errands or grabbing coffee.</p>
+
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">2. Office Chic</h3>
+                        <p>Tuck the Classic Tee into a pair of tailored trousers or a sleek midi skirt. Layer with a sharp blazer and finish with pointed-toe flats or loafers. It’s a comfortable yet professional look that commands attention.</p>
+
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">3. Weekend Layers</h3>
+                        <p>For a relaxed weekend vibe, wear the tee under an open denim or flannel shirt. Combine with comfortable chinos or shorts and your favorite boots. It’s a practical and stylish look for any casual outing.</p>
+
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">4. Evening Elegance</h3>
+                        <p>Believe it or not, a tee can be evening-appropriate. Style it with a flowing silk skirt or wide-leg satin pants. Add a pair of statement earrings, heeled sandals, and a clutch to elevate the entire outfit instantly.</p>
+
+                        <h3 class="font-serif-display text-2xl font-bold text-gray-800 mt-12 mb-4">5. Monochrome Modern</h3>
+                        <p>Create a sophisticated, modern look by sticking to a single color palette. Pair a white tee with white jeans and a white blazer, or a black tee with black trousers and a black leather jacket. This creates a powerful, streamlined silhouette.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- More From The Journal -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-serif-display font-bold text-center mb-12">More From The Journal</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- More Posts Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                        <img src="https://placehold.co/600x400/d1d5db/475569?text=Design+Process" alt="Design Process" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-1">BEHIND THE SCENES</p>
+                            <h3 class="text-xl font-bold mb-3">Behind the Seams: Our Design Process</h3>
+                            <a href="#" class="font-semibold text-gray-800 hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- More Posts Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                        <img src="https://placehold.co/600x400/a3a3a3/475569?text=Sustainable+Fabrics" alt="Sustainable Fabrics" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-1">SUSTAINABILITY</p>
+                            <h3 class="text-xl font-bold mb-3">The Art of Sustainable Fabrics</h3>
+                            <a href="#" class="font-semibold text-gray-800 hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- More Posts Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                        <img src="https://placehold.co/600x400/94a3b8/475569?text=Autumn+Collection" alt="Autumn Collection" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-1">COLLECTIONS</p>
+                            <h3 class="text-xl font-bold mb-3">First Look: The Autumn '25 Collection</h3>
+                            <a href="#" class="font-semibold text-gray-800 hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-2xl font-serif-display font-bold mb-4">Yovan attire</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Twitter</a>
+            </div>
+            <div class="text-gray-400 mb-6 space-y-1">
+                <p>Email: <a href="mailto:yovanattire@gmail.com" class="hover:text-white">yovanattire@gmail.com</a></p>
+                <p>Phone: <a href="tel:8769091670" class="hover:text-white">8769091670</a></p>
+            </div>
+            <p class="text-gray-500">&copy; 2025 Yovan attire. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // --- Mobile Menu Toggle ---
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
